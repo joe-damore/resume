@@ -1,0 +1,14 @@
+{
+  "advanced": {
+    "label": "Highly Proficient",
+    "tagline": null
+  },
+  "proficient": {
+    "label": "Proficient",
+    "tagline": null
+  },
+  "learning": {
+    "label": "Limited Experience",
+    "tagline": "But eager to learn more!"
+  }
+}

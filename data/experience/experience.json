@@ -1,0 +1,26 @@
+{
+  "advanced": [
+    "JavaScript",
+    "Node.js",
+    "TypeScript",
+    "Ansible",
+    "Webpack",
+    "Customer Service"
+  ],
+  "proficient": [
+    "React",
+    "Redux",
+    "CI",
+    "Docker",
+    "Jenkins",
+    "Linux Sysadmin",
+    "DevOps"
+  ],
+  "learning": [
+    "Python",
+    "Jest",
+    "Rust",
+    "Cypress",
+    "Deno"
+  ]
+}
