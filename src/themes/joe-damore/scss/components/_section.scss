@@ -39,6 +39,7 @@ $section-indicator-margin: 6px;
       position: relative;
 
       &__content {
+        display: inline-block; // Fixes bottom border positioning in Firefox.
         position: relative;
         padding-bottom: $section-indicator-margin;
         font-family: 'DM Sans';
