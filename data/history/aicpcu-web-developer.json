@@ -7,10 +7,10 @@
   "endMonth": null,
   "endYear": null,
   "duties": [
-    "Facilitate the timely release of website features and bugfixes by working directly with stakeholders, product owners, and QA engineers",
+    "Develop and maintain a large React app that enables our customers to track their educational progress and engage more interactively with our products",
     "Work closely with QA engineers to troubleshoot and document website behavior for new and legacy projects",
+    "Facilitate the timely release of website features and bugfixes by working directly with stakeholders, product owners, and QA engineers",
     "Implement coding and documentation standards across our projects",
-    "Helped build a React app that enables our customers to track their educational progress and engage more interactively with our products",
-    "Collaborated with Java engineers to transition our Spring Boot-based REST API to Express.js"
+    "Collaborate with Java engineers to transition our longstanding Spring Boot-based REST API to Express.js"
   ]
 }
