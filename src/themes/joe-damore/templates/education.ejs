@@ -1,0 +1,38 @@
+<section class="section education">
+  <aside class="section__aside">
+    <h2 class="section__aside__label">
+      <span class="section__aside__label__content section__aside__label__content--education">
+        Education
+      </span>
+    </h2>
+  </aside>
+  <div class="section__main">
+    <div class="education__container">
+      <div class="education__container__primary education__high-school">
+        <div class="education__high-school__name">
+          <%- education.highSchool.name %>
+        </div>
+        <div class="education__high-school__class">
+          Class of <%- education.highSchool.class %>
+        </div>
+        <ul class="education__high-school__details">
+          <li class="education__high-school__details__item education__high-school__details__item--district">
+            <%- education.highSchool.district %>
+          </li>
+          <li class="education__high-school__details__item education__high-school__details__item--location">
+            <%- education.highSchool.location %>
+          </li>
+        </ul>
+      </div>
+      <div class="education__container__secondary">
+        <ul class="education__other">
+          <% education.other.forEach((item) => { %>
+            <li class="education__other__item">
+              <%- item %>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+$header-buffer: 24px;
+$item-margin-y: 24px;
+
+.history {
+  page-break-after: always;
+
+  &__item {
+
+    &__header {
+      display: flex;
+      font-weight: bold;
+
+      &__details {
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+
+      &__date {
+        margin-left: $header-buffer;
+        flex-shrink: 0;
+        flex-grow: 1;
+        text-align: right;
+        font-family: 'DM Sans';
+        font-size: 13pt;
+        font-weight: bold;
+      }
+    }
+
+    &__company {
+      font-size: 10pt;
+      font-family: 'DM Sans';
+      font-weight: 500;
+    }
+
+    &__title {
+      font-weight: bold;
+      font-family: 'DM Sans';
+      font-size: 13pt;
+      margin-bottom: 2px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $item-margin-y;
+    }
+  }
+}

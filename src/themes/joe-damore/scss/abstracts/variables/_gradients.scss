@@ -1,0 +1,7 @@
+@use './color-scales';
+
+$red: linear-gradient(to right, color-scales.$red);
+$purple: linear-gradient(to right, color-scales.$purple);
+$blue: linear-gradient(to right, color-scales.$blue);
+$green: linear-gradient(to right, color-scales.$green);
+$orange: linear-gradient(to right, color-scales.$orange);

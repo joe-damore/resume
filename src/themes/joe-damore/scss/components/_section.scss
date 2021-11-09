@@ -1,0 +1,119 @@
+@use 'sass:math';
+@use '../abstracts/variables/color-scales';
+@use '../abstracts/variables/gradients';
+
+$margin-x: 48px;
+$margin-y: 32px;
+$margin-y-sm: 24px;
+$aside-size: 128px;
+$aside-size-sm: 96px;
+
+$section-indicator-width: 32px;
+$section-indicator-height: 4px;
+$section-indicator-radius: 5px;
+$section-indicator-margin: 6px;
+
+.section {
+  display: flex;
+  margin-left: -(math.div($margin-x, 2));
+  margin-right: -(math.div($margin-x, 2));
+  page-break-inside: avoid;
+
+  &__aside,
+  &__main {
+    margin-left: (math.div($margin-x, 2));
+    margin-right: (math.div($margin-x, 2));
+  }
+
+  &__aside {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: $aside-size;
+
+    &__label {
+      margin-top: 0;
+      margin-bottom: $margin-y;
+      text-align: right;
+      line-height: 1.05;
+      top: -1px;
+      position: relative;
+
+      &__content {
+        position: relative;
+        padding-bottom: $section-indicator-margin;
+        font-family: 'DM Sans';
+        font-weight: bold;
+        font-size: 13pt;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          transform: translateY(100%);
+          height: $section-indicator-height;
+          width: $section-indicator-width;
+          border-radius: $section-indicator-radius;
+        }
+
+        &--history {
+          &::after {
+            background: color-scales.$purple-primary;
+            background: gradients.$purple;
+          }
+        }
+
+        &--education {
+          &::after {
+            background: color-scales.$blue-primary;
+            background: gradients.$blue;
+          }
+        }
+
+        &--experience {
+          &::after {
+            background: color-scales.$green-primary;
+            background: gradients.$green;
+          }
+        }
+
+        &--projects {
+          &::after {
+            background: color-scales.$orange-primary;
+            background: gradients.$orange;
+          }
+        }
+      }
+
+      // &::after {
+      //   content: '';
+      //   position: absolute;
+      //   right: 0;
+      //   top: 0;
+      //   width: $section-indicator-width;
+      //   height: 100%;
+      //   background-color: lightgray;
+      //   border-radius: $section-indicator-radius;
+      // }
+    }
+
+    @media print {
+      width: $aside-size-sm;
+    }
+  }
+
+  &__main {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $margin-y;
+  }
+
+  &--small-margin {
+    &:not(:last-child) {
+      margin-bottom: $margin-y-sm;
+    }
+  }
+}

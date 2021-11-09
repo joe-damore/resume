@@ -1,0 +1,8 @@
+$margin-top: .75in;
+$margin-x: .75in;
+$margin-bottom: .75in;
+
+@page {
+  size: auto;
+  margin: $margin-top $margin-x $margin-bottom $margin-x;
+}

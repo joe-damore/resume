@@ -1,0 +1,14 @@
+$list-padding: 18px;
+$list-margin: 12px;
+$list-item-margin: 7px;
+
+ul,
+ol {
+  padding-left: $list-padding;
+  margin-top: $list-margin;
+  margin-bottom: $list-margin;
+}
+
+li {
+  margin-bottom: $list-item-margin;
+}
