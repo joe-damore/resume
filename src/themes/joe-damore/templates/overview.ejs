@@ -13,7 +13,13 @@
       <ul class="overview__contact">
         <% contact.forEach(function(contact) { %>
           <li class="overview__contact__item overview__contact__item--<%- contact.id %>">
-            <%- contact.value %>
+            <% if (contact.data) { %>
+              <a href="<%- contact.data %>">
+                <%- contact.value %>
+              </a>
+            <% } else { %>
+              <%- contact.value %>
+            <% } %>
           </li>
         <% }); %>
       </ul>
