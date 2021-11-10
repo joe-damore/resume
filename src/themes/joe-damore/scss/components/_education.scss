@@ -1,0 +1,113 @@
+@use 'sass:math';
+
+$margin-x: 48px;
+
+$detail-icon-size: 22px;
+$detail-icon-space-x: 10px;
+$detail-icon-space-y: 12px;
+
+$other-icon-size: 18px;
+$other-icon-space-x: 10px;
+$other-icon-space-y: 12px;
+
+.education {
+  &__container {
+    display: flex;
+    margin-left: -(math.div($margin-x, 2));
+    margin-right: -(math.div($margin-x, 2));
+    align-items: stretch;
+
+    &__primary,
+    &__secondary {
+      flex-shrink: 0;
+      flex-basis: 0;
+      margin-left: math.div($margin-x, 2);
+      margin-right: math.div($margin-x, 2);
+      position: relative;
+    }
+
+    &__primary,
+    &__secondary {
+      flex-grow: 1;
+    }
+  }
+
+  &__other {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &__item {
+      list-style: none;
+      padding-left: ($other-icon-size + $other-icon-space-x);
+      margin-bottom: $other-icon-space-y;
+      position: relative;
+
+      &::before {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        content: '';
+        width: $other-icon-size;
+        height: $other-icon-size;
+        background-image: url('resources/svg/education-check.svg');
+      }
+    }
+  }
+
+  &__high-school {
+    &__name {
+      font-size: 15pt;
+      font-family: 'DM Sans';
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    &__class {
+      text-align: center;
+      font-family: 'DM Sans';
+      font-weight: bold;
+      font-size: 12pt;
+      margin-bottom: 24px;
+    }
+
+    &__details {
+      padding-left: 0;
+
+      &__item {
+        list-style: none;
+        padding-left: ($detail-icon-size + $detail-icon-space-x);
+        margin-bottom: $detail-icon-space-y;
+        position: relative;
+
+        &::before {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: -2px;
+          content: '';
+          width: $detail-icon-size;
+          height: $detail-icon-size;
+        }
+
+        &--district {
+          &:before {
+            background-image: url('resources/svg/education-district.svg');
+          }
+        }
+
+        &--location {
+          &:before {
+            background-image: url('resources/svg/education-location.svg');
+          }
+        }
+      }
+    }
+  }
+}

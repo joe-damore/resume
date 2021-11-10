@@ -1,0 +1,32 @@
+<section class="section experience">
+  <aside class="section__aside">
+    <h2 class="section__aside__label">
+      <span class="section__aside__label__content section__aside__label__content--experience">
+        Skills &amp; Experience
+      </span>
+    </h2>
+  </aside>
+  <div class="section__main">
+    <div class="experience__container">
+      <% Object.keys(experience.experience).forEach((key) => { %>
+        <div class="experience__container__column">
+          <div class="experience__heading">
+            <span class="experience__heading__label">
+              <%- experience.levels[key].label %>
+            </span>
+          </div>
+          <ul class="experience__list experience__list--<%- key %>">
+          <% experience.experience[key].forEach((detail) => { %>
+            <li class="experience__list__item experience__list__item--<%- key %>"><%- detail %></li>
+          <% }); %>
+          </ul>
+          <% if(experience.levels[key].tagline) { %>
+            <div class="experience__tagline">
+              <%- experience.levels[key].tagline %>
+            </div>
+          <% } %>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+{
+  "company": "The Institutes (AICPCU)",
+  "title": "Web Developer",
+  "overview": null,
+  "startMonth": 3,
+  "startYear": 2018,
+  "endMonth": null,
+  "endYear": null,
+  "duties": [
+    "Facilitate the timely release of website features and bugfixes by working directly with stakeholders, product owners, and QA engineers",
+    "Develop and maintain a large React app that enables our customers to track their educational progress and engage more interactively with our products",
+    "Work closely with QA engineers to troubleshoot and document website behavior for new and legacy projects",
+    "Implement coding and documentation standards across our projects",
+    "Collaborate with Java engineers to transition our longstanding Spring Boot-based REST API to Express.js"
+  ]
+}

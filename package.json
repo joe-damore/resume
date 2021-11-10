@@ -1,0 +1,23 @@
+{
+  "name": "resume",
+  "version": "0.1.0",
+  "description": "Joe D'Amore resume",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node .",
+    "serve": "npx http-server ./dist -p 8080 --cors"
+  },
+  "repository": "git@github.com:joe-damore/resume.git",
+  "author": "Joe D'Amore <joe@joedamore.me>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "del": "^6.0.0",
+    "ejs": "^3.1.6",
+    "fs-extra": "^10.0.0",
+    "sass": "^1.43.4"
+  },
+  "devDependencies": {
+    "http-server": "^14.0.0"
+  }
+}

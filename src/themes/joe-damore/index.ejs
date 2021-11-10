@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>
+      <%- overview.pageTitle %>
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <article class="resume">
+      <%- include('templates/overview', { contact: contact, overview: overview }) %>
+      <%- include('templates/history', { history: history }) %>
+      <%- include('templates/education', { education: education }) %>
+      <%- include('templates/experience', { experience: experience }) %>
+      <%- include('templates/projects', { projects: projects }) %>
+    </article>
+  </body>
+
+</html>

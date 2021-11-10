@@ -1,0 +1,11 @@
+{
+  "name": "Preserving Newberrytown Website",
+  "url": "https://www.preservingnewberrytown.org",
+  "urlPretty": "www.preservingnewberrytown.org",
+  "tagline": "Preserving the History of Newberrytown website and infrastructure",
+  "notes": [
+    "Designed and developed the Preserving Newberrytown website",
+    "Deployed Test and Live environments using Linode services",
+    "Implemented automated deployments to Test and Live environments using Jenkins"
+  ]
+}

@@ -1,0 +1,78 @@
+@use 'sass:math';
+
+$gutter-x: 24px;
+$gutter-y: 24px;
+
+$link-icon-size: 14px;
+$link-icon-gutter: 8px;
+
+.projects {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.project {
+  position: relative;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+
+    &__name {
+      font-family: 'DM Sans';
+      font-size: 13pt;
+      font-weight: bold;
+    }
+  }
+
+  &__tagline {
+    font-size: 10pt;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+
+  &__notes {
+
+    &__list {
+      margin-top: 0;
+    }
+
+  }
+
+  &__url {
+    font-size: 10pt;
+    padding-left: ($link-icon-size + $link-icon-gutter);
+    position: relative;
+
+    &::before {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      content: '';
+      width: $link-icon-size;
+      height: $link-icon-size;
+      background-image: url('resources/svg/projects-link.svg');
+    }
+  }
+
+  &:not(:first-child) {
+    margin-top: math.div($gutter-y, 2);
+  }
+  &:not(:last-child) {
+    margin-bottom: math.div($gutter-y, 2);
+    &::after {
+      content: '';
+      //height: 1px;
+      //width: 100%;
+      position: absolute;
+      bottom: -(math.div($gutter-y, 2));
+      //background-color: lightgray;
+    }
+  }
+}

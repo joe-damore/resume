@@ -1,0 +1,33 @@
+<section class="section section--small-margin overview">
+  <section class="section__aside overview__portrait">
+    <div class="portrait">
+    </div>
+  </section>
+  <section class="section__main overview__info">
+    <div class="overview__info__name">
+      <h1 class="overview__name">
+        <%- overview.name %>
+      </h1>
+    </div>
+    <div class="overview__info__contact">
+      <ul class="overview__contact">
+        <% contact.forEach(function(contact) { %>
+          <li class="overview__contact__item overview__contact__item--<%- contact.id %>">
+            <% if (contact.data) { %>
+              <a href="<%- contact.data %>">
+                <%- contact.value %>
+              </a>
+            <% } else { %>
+              <%- contact.value %>
+            <% } %>
+          </li>
+        <% }); %>
+      </ul>
+    </div>
+    <div class="overview__info__brief">
+      <p class="overview__brief">
+        <%- overview.bio %>
+      </p>
+    </div>
+  </section>
+</section>

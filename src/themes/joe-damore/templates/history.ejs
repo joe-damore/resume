@@ -1,0 +1,33 @@
+<section class="section history">
+  <aside class="section__aside">
+    <h2 class="section__aside__label">
+      <span class="section__aside__label__content section__aside__label__content--history">
+        Work History
+      </span>
+    </h2>
+  </aside>
+  <div class="section__main">
+    <% history.forEach(function(job) { %>
+      <div class="history__item">
+        <div class="history__item__header">
+          <div class="history__item__header__details">
+            <div class="history__item__title">
+              <%- job.title %>
+            </div>
+            <div class="history__item__company">
+              <%- job.company %>
+            </div>
+          </div>
+          <div class="history__item__header__date">
+            <%- job.startFriendlyAbbrev %> &ndash; <%- job.endFriendlyAbbrev %>
+          </div>
+        </div>
+        <ul class="history__item__duties">
+          <% job.duties.forEach(function(duty) { %>
+            <li class="history__item__duties__item"><%- duty %></li>
+          <% }); %>
+        </ul>
+      </div>
+    <% }); %>
+  </div>
+</section>

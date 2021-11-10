@@ -1,0 +1,10 @@
+{
+  "name": "Close Other Tabs Firefox Extension",
+  "url": "https://github.com/joe-damore/close-other-tabs-item",
+  "urlPretty": "github.com/joe-damore/close-other-tabs-item",
+  "tagline": "\"Close Other Tabs\" menu item extension for Firefox",
+  "notes": [
+    "Small extension to add a \"Close Other Tabs\" item to the tab context menu",
+    "Supports 5 languages thanks to generous open source contributors"
+  ]
+}

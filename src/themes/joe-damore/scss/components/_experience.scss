@@ -1,0 +1,82 @@
+@use 'sass:math';
+@use '../abstracts/variables/color-scales';
+@use '../abstracts/variables/gradients';
+
+$column-gutter: 24px;
+
+.experience {
+  &__container {
+    display: flex;
+    margin-left: -(math.div($column-gutter, 2));
+    margin-right: -(math.div($column-gutter, 2));
+
+    &__column {
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 0;
+      margin-left: (math.div($column-gutter, 2));
+      margin-right: (math.div($column-gutter, 2));
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'DM Sans';
+    position: relative;
+    //padding-bottom: 14px;
+    font-size: 13pt;
+
+    &__label {
+
+    }
+  }
+
+  &__list {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    margin-bottom: 8px;
+
+    &__item {
+      padding: 2px 9px 2px 9px;
+      border-radius: 4px;
+      margin-bottom: 4px;
+      box-decoration-break: slice;
+      font-size: 10pt;
+      font-family: 'DM Sans';
+      font-weight: 500;
+      color: #ffffff;
+
+      &--advanced {
+        background: color-scales.$purple-primary;
+        background: gradients.$purple;
+      }
+
+      &--proficient {
+        background: color-scales.$blue-primary;
+        background: gradients.$blue;
+      }
+
+      &--learning {
+        background: color-scales.$green-primary;
+        background: gradients.$green;
+      }
+
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__tagline {
+    width: 100%;
+    text-align: center;
+    font-size: 10pt;
+    font-weight: normal;
+    font-family: 'DM Sans';
+    font-weight: 500;
+  }
+}

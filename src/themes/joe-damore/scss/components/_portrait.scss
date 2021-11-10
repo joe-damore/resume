@@ -1,0 +1,25 @@
+$portrait-size: 128px;
+$narrow-radius: 18px;
+$portrait-size-sm: 96px;
+$narrow-radius-sm: 14px;
+
+.portrait {
+  width: $portrait-size;
+  height: $portrait-size;
+  border-top-left-radius: $portrait-size;
+  border-top-right-radius: $portrait-size;
+  border-bottom-left-radius: $portrait-size;
+  border-bottom-right-radius: $narrow-radius;
+  background-color: lightgray;
+  // TODO Set 'display' to `block` once portrait is ready.
+  display: none;
+
+  @media print {
+    width: $portrait-size-sm;
+    height: $portrait-size-sm;
+    border-top-left-radius: $portrait-size-sm;
+    border-top-right-radius: $portrait-size-sm;
+    border-bottom-left-radius: $portrait-size-sm;
+    border-bottom-right-radius: $narrow-radius-sm;
+  }
+}

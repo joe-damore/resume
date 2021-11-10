@@ -1,0 +1,15 @@
+$padding-x: 48px;
+$padding-y: 36px;
+
+.resume {
+  padding: $padding-x $padding-y;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+
+  @media print {
+    width: 100%;
+    max-width: 100%;
+    padding: 0; // Use page margins instead.
+  }
+}

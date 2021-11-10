@@ -1,0 +1,10 @@
+{
+  "name": "My Résumé",
+  "url": "https://github.com/joe-damore/resume",
+  "urlPretty": "github.com/joe-damore/resume",
+  "tagline": "Data and source code for this résumé",
+  "notes": [
+    "Résumé is built as a webpage and can be exported to PDF",
+    "Separation between data, theme, and generator enables effortless customization"
+  ]
+}
