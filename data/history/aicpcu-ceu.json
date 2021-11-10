@@ -1,5 +1,5 @@
 {
-  "company": "The Institutes (AICPCU)",
+  "company": "CEU / The Institutes (AICPCU)",
   "title": "Corporate Account Specialist",
   "overview": null,
   "startMonth": 10,
@@ -7,9 +7,9 @@
   "endMonth": 9,
   "endYear": 2017,
   "duties": [
-    "Worked with corporate customers to manage continuing education requirements for their employees",
     "Performed continuous research to ensure that our educational products complied with evolving continuing education requirements across each U.S. state",
-    "Developed an application to generate state CE course filing forms, reducing the time it took to prepare filing forms from over an hour to just a few minutes",
+    "Developed a tool to generate state continuing education filing forms, reducing the time it took to prepare filing forms for our courses from over an hour to just a few minutes",
+    "Worked with corporate customers to manage continuing education requirements for their employees",
     "Assisted customers with general inquiries over phone, email, and online chat"
   ]
 }
