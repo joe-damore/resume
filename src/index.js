@@ -17,10 +17,10 @@ const main = async () => {
   const dist = path.resolve(process.cwd(), 'dist');
   if (fs.existsSync(dist)) {
     await del(dist);
-    await fs.promises.mkdir(dist, {
-      recursive: true,
-    });
   }
+  await fs.promises.mkdir(dist, {
+    recursive: true,
+  });
 
   // TODO Await all data loading first.
   const data = {
@@ -46,8 +46,13 @@ const main = async () => {
     filename: theme.template
   });
 
-  await fs.promises.writeFile(path.join(dist, 'style.css'), style.css, 'utf8');
-  await fs.promises.writeFile(path.join(dist, 'index.html'), html, 'utf8');
+  try {
+    await fs.promises.writeFile(path.resolve(path.join(dist, 'style.css')), style.css, 'utf8');
+    await fs.promises.writeFile(path.join(dist, 'index.html'), html, 'utf8');
+  }
+  catch (e) {
+    console.log(e);
+  }
 
   if (fs.existsSync(theme.resources)) {
     await fse.copy(theme.resources, path.join(dist, 'resources'));
